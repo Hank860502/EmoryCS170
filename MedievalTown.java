@@ -72,6 +72,7 @@ public class MedievalTown{
 		// Split windows into left and right parts and loop it twice
 
 		t.backward(40);
+		t.pendown();
 		// turtle back in original start point
 
 	};
