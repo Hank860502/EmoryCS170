@@ -7,6 +7,13 @@ public class MedievalTown{
 		// System.out.printf("" + x);
 	};
 
+	public static void square(Turtle t){
+		for(int i = 0; i < 4; i++) {
+			t.forward(10);
+			t.left(90);
+		};
+	};
+
 	public static void stick(Turtle t){
 		double x = Math.sqrt(500);
 		// square root of 20*20 + 10*10 to get the length of the roof
@@ -45,9 +52,29 @@ public class MedievalTown{
 		t.forward(100);
 		t.left(90);
 		// turtle back in original start point
+
+		// start to draw windows on the stick
+		for(int i=0; i<2; i++){
+			t.forward(20);
+			t.left(90);
+			t.penup();
+			t.forward(40);
+			t.pendown();
+			for(int j=0; j<3; j++){
+				t.pendown();
+				square(t);
+				t.penup();
+				t.forward(20);
+			};
+			t.backward(100);
+			t.right(90);
+		};
+		// Split windows into left and right parts and loop it twice
+
+		t.backward(40);
+		// turtle back in original start point
+
 	};
 
-	public static void windows(Turtle t){
-		
-	}
+
 }
