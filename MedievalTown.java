@@ -3,8 +3,9 @@ public class MedievalTown{
 		Turtle hank = new Turtle();
 		
 		// hank.forward(100);
-		stick(hank);
 		// System.out.printf("" + x);
+		// stick(hank);
+		wall(hank);
 	};
 
 	public static void square(Turtle t){
@@ -75,6 +76,53 @@ public class MedievalTown{
 		t.pendown();
 		// turtle back in original start point
 
+	};
+
+	public static void wall(Turtle t){
+		for(int i=0; i<8; i++){
+			t.forward(80);
+			t.backward(80);
+			t.left(90);
+			t.forward(5);
+			t.right(90);
+		};
+		t.left(90);
+		t.backward(40);
+		t.right(90);
+		// draw all long lines and return to origin
+		for(int j=0; j<8; j++){
+			t.forward(5);
+			t.left(90);
+			for(int i=0; i<3; i++){
+				t.penup();
+				t.forward(5);
+				t.pendown();
+				t.forward(5);
+			};
+			// dashes of 3
+
+			t.penup();
+			t.backward(30);
+			t.right(90);
+			t.forward(5);
+			t.left(90);
+			// get ready to draw the next column 
+			for(int i=0; i<4; i++){
+				t.pendown();
+				t.forward(5);
+				t.penup();
+				t.forward(5);
+			};
+			// dashes of 4
+			t.penup();
+			t.backward(40);
+			t.right(90);
+			// set up for next loop
+		};
+		// 8 sets of this combination
+
+		t.backward(80);
+		// turtle back in original start point
 	};
 
 
