@@ -9,7 +9,8 @@ public class MedievalTown{
 		// wall(hank);
 		// arc(hank);
 		// tree(hank);
-		star(hank);
+		// star(hank);
+		mountain(hank);
 	};
 
 	public static void square(Turtle t){
@@ -183,5 +184,28 @@ public class MedievalTown{
 		t.left(90);
 		// turtle back in original start point
 	};
-	
+
+	public static void mountain(Turtle t){
+		t.left(30);
+		double x=Math.sqrt(160*160+80*80);
+		// square root of the sum of two sides squares is the hypotenuse, this gets one side of the mountain
+		t.forward(x);
+		t.right(90);
+		double y=Math.sqrt(120*120+60*60);
+		// second side of the mountain
+		t.forward(y);
+
+		t.penup();
+		t.right(120);
+		t.forward(220);
+		t.right(90);
+		t.forward(30);
+		t.pendown();
+		t.right(90)
+		// not so sure if the turle is back in origin
+
+		// turtle back in original start point
+
+	};
+
 }
