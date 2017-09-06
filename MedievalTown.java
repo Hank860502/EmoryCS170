@@ -8,7 +8,8 @@ public class MedievalTown{
 		// stick(hank);
 		// wall(hank);
 		// arc(hank);
-		tree(hank);
+		// tree(hank);
+		star(hank);
 	};
 
 	public static void square(Turtle t){
@@ -166,5 +167,21 @@ public class MedievalTown{
 		t.right(90);
 		// turtle back in original start point
 
-	}
+	};
+
+	public static void star(Turtle t){
+		for(int i=0; i<7; i++){
+			t.forward(10);
+			t.left(135);
+			t.forward(10);
+			t.left(180);
+		};
+		// 7 sets of small triangles
+		t.forward(10);
+		t.right(135);
+		t.forward(10);
+		t.left(90);
+		// turtle back in original start point
+	};
+	
 }
