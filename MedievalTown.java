@@ -7,10 +7,10 @@ public class MedievalTown{
 		// System.out.printf("" + x);
 		// stick(hank);
 		// wall(hank);
-		// arc(hank);
+		arc(hank);
 		// tree(hank);
 		// star(hank);
-		mountain(hank);
+		// mountain(hank);
 	};
 
 	public static void square(Turtle t){
@@ -131,13 +131,19 @@ public class MedievalTown{
 	};
 
 	public static void arc(Turtle t){
-		t.forward(10);
+		t.forward(40);
 		t.left(90);
 		t.forward(30);
-		double pi= Math.PI;
-		double x= 20*pi/2;
+		10=s/2sin(6)
+		double x=
+		for(int i=0; i<15; i++){
+			t.forward(x);
+			t.left(360/30);
+		};
+		// double pi= Math.PI;
+		// double x= 20*pi/2;
 		// half perimeter of the inside arc
-		t.right(pi);
+		// t.right(pi);
 		t.forward(100);
 		t.right(90);
 		t.penup();
@@ -201,7 +207,7 @@ public class MedievalTown{
 		t.right(90);
 		t.forward(30);
 		t.pendown();
-		t.right(90)
+		t.right(90);
 		// not so sure if the turle is back in origin
 
 		// turtle back in original start point
