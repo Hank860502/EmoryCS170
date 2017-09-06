@@ -3,9 +3,12 @@ public class MedievalTown{
 		Turtle hank = new Turtle();
 		
 		// hank.forward(100);
+		// double x=Math.PI;
 		// System.out.printf("" + x);
 		// stick(hank);
-		wall(hank);
+		// wall(hank);
+		// arc(hank);
+		tree(hank);
 	};
 
 	public static void square(Turtle t){
@@ -125,5 +128,43 @@ public class MedievalTown{
 		// turtle back in original start point
 	};
 
+	public static void arc(Turtle t){
+		t.forward(10);
+		t.left(90);
+		t.forward(30);
+		double pi= Math.PI;
+		double x= 20*pi/2;
+		// half perimeter of the inside arc
+		t.right(pi);
+		t.forward(100);
+		t.right(90);
+		t.penup();
+		t.forward(10);
+		// move turtle to center of the circle
+	};
 
+	public static void tree(Turtle t){
+		double x=Math.sqrt(200);
+
+		t.left(90);
+		t.forward(15);
+		// main line for the tree and stop 5 before reaching the first leaf
+		for(int i=0; i<5; i++){
+			t.forward(5);
+			t.left(135);
+			t.forward(x);
+			t.penup();
+			t.left(135);
+			t.forward(20);
+			t.left(135);
+			t.pendown();
+			t.forward(x);
+			t.right(45);
+			// drawing one leaf
+		};
+		t.backward(40);
+		t.right(90);
+		// turtle back in original start point
+
+	}
 }
