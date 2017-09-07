@@ -1,10 +1,11 @@
 public class MedievalTown{
 	public static void main(String[] args){
 		Turtle hank = new Turtle();
-		hank.delay(1);
+		hank.delay(0);
 		// hank.forward(100);
 		// double x=Math.PI;
 		// System.out.printf("" +x);
+
 		stick(hank);
 		hank.forward(50);
 		wall(hank);
@@ -22,6 +23,7 @@ public class MedievalTown{
 		hank.left(90);
 		hank.forward(10);
 		hank.right(90);
+		// move turtle to the point that I can loop the arc thrice
 		for(int i=0; i<3; i++){
 			hank.penup();
 			hank.forward(60);
@@ -30,19 +32,23 @@ public class MedievalTown{
 			hank.right(90);
 			hank.pendown();
 			arc(hank);
-		}
+		};
+		hank.penup();
+		hank.right(90);
+		hank.forward(90);
+		hank.right(90);
+		hank.forward(30);
+		hank.left(180);
+		// move turtle to where the bottom row of tree starts
+		trees(hank);
+		// bottom layer of trees
+		hank.left(90);
+		hank.penup();
+		hank.forward(40);
+		hank.right(90);
+		hank.forward(40);
+		trees(hank);
 
-		// hank.forward(30);
-		// hank.right(90);
-		// hank.pendown();
-		// arc(hank);
-		// hank.penup();
-		// hank.forward(60);
-		// hank.left(90);
-		// hank.forward(20);
-		// hank.right(90);
-		// hank.pendown();
-		// arc(hank);
 
 		// tree(hank);
 		// hank.forward(100);
@@ -216,6 +222,7 @@ public class MedievalTown{
 
 	public static void tree(Turtle t){
 		double x=Math.sqrt(200);
+		// diagonal of one square to determine how long is the leaf, square of 10*10+10*10
 
 		t.left(90);
 		t.forward(15);
@@ -238,6 +245,19 @@ public class MedievalTown{
 		// turtle back in original start point
 
 	};
+
+	public static void trees(Turtle t){
+		for(int i=0; i<4; i++){
+			tree(t);
+			t.penup();
+			t.forward(30);
+			t.pendown();
+		};
+		t.penup();
+		t.backward(120);
+		// turtle back to origin
+	};
+	// draw four trees at once
 
 	public static void star(Turtle t){
 		for(int i=0; i<7; i++){
