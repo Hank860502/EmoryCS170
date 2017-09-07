@@ -1,7 +1,7 @@
 public class MedievalTown{
 	public static void main(String[] args){
 		Turtle hank = new Turtle();
-		hank.delay(2);
+		hank.delay(1);
 		// hank.forward(100);
 		// double x=Math.PI;
 		// System.out.printf("" +x);
@@ -12,8 +12,38 @@ public class MedievalTown{
 		hank.forward(80);
 		arc(hank);
 		hank.penup();
-		// wall(hank);
-		// stick(hank);
+		hank.forward(40);
+		hank.pendown();
+		wall(hank);
+		hank.forward(80);
+		stick(hank);
+		hank.penup();
+		hank.forward(20);
+		hank.left(90);
+		hank.forward(10);
+		hank.right(90);
+		for(int i=0; i<3; i++){
+			hank.penup();
+			hank.forward(60);
+			hank.left(90);
+			hank.forward(20);
+			hank.right(90);
+			hank.pendown();
+			arc(hank);
+		}
+
+		// hank.forward(30);
+		// hank.right(90);
+		// hank.pendown();
+		// arc(hank);
+		// hank.penup();
+		// hank.forward(60);
+		// hank.left(90);
+		// hank.forward(20);
+		// hank.right(90);
+		// hank.pendown();
+		// arc(hank);
+
 		// tree(hank);
 		// hank.forward(100);
 		// star(hank);
@@ -35,6 +65,15 @@ public class MedievalTown{
 		t.forward(50);
 		t.left(90);
 		t.forward(100);
+		// t.right(90);
+		// t.forward(20);
+		// t.left(90);
+		// t.forward(10);
+		// t.backward(10);
+		// t.right(90);
+		// t.backward(20);
+		// t.left(90);
+		// im testing out that my angles are right, by drawing out the actual triangle at the stick, because the wall seems to overlap my sticks by a little
 		t.right(60);
 		t.forward(x);
 		t.left(60);
@@ -93,15 +132,20 @@ public class MedievalTown{
 
 	public static void wall(Turtle t){
 		for(int i=0; i<8; i++){
-			t.forward(80);
-			t.backward(80);
-			t.left(90);
-			t.forward(5);
-			t.right(90);
+			if(i<7){
+				t.forward(80);
+				t.backward(80);
+				t.left(90);
+				t.forward(5);
+				t.right(90);
+			}else{
+				t.forward(80);
+				t.backward(80);
+				t.left(90);
+				t.backward(35);
+				t.right(90);
+			}
 		};
-		t.left(90);
-		t.backward(40);
-		t.right(90);
 		// draw all long lines and return to origin
 		for(int j=0; j<8; j++){
 			t.forward(5);
@@ -137,35 +181,35 @@ public class MedievalTown{
 		t.backward(80);
 		t.pendown();
 		// turtle back in original start point
+		// i can actualy leave the turtle there since i am always going to draw the next element on the right; however, it's a better practice to bring back the turtle to it's origin
 	};
 
 	public static void arc(Turtle t){
-		System.out.printf("arc!");
 		t.forward(10);
 		t.left(90);
 		t.forward(30);
-		double angle = 180/30;
+		double sides = 1000;
+		// I set this variable so that the arc could be as perfect as I want
+		double angle = 180/(sides-2);
 		// angle of a 30-gon
 		double x=Math.sin(angle* Math.PI / 180)*10*2;
 		double y=Math.sin(angle* Math.PI / 180)*20*2;
-		System.out.printf("arc2");
 		// using the formula: radius=s/[2sin/180/n], where s=length of side and n=number of sides, to get the value of each times turle has to move forward
 		//Math.sin() only takes radian, so angle * Math.PI/180 get the radian first
-		for(int i=0; i<15; i++){
+		for(int i=0; i<sides/2; i++){
 			t.forward(x);
-			t.right(360/30);
+			t.right(360/sides);
 		};
-		System.out.printf("arc3");
 		t.forward(30);
 		t.left(90);
 		t.forward(10);
 		t.left(90);
 		t.forward(30);
-		for(int i=0; i<15; i++){
+		for(int i=0; i<sides/2; i++){
 			t.forward(y);
-			t.left(360/30);
+			t.left(360/sides);
 		};
-		t.forward(35);
+		t.forward(30);
 		t.left(90);
 		// turtle back in origin
 	};
