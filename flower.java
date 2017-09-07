@@ -1,8 +1,8 @@
 public class flower{
 	public static void main(String[] args){
 		Turtle hank = new Turtle();
-		hank.delay(10);
-		hello(hank, 6, 15, 70);
+		hank.delay(5);
+		flower(hank, 6, 15, 70);
 	};
 
 	public static void polygon(Turtle t, double sides, double size){
@@ -18,7 +18,7 @@ public class flower{
 		}
 	};
 
-	public static void hello(Turtle t, int numPetals, int numLayers, double length){
+	public static void flower(Turtle t, int numPetals, int numLayers, double length){
 		for(int i=0; i <numPetals; i++){
 			petal(t, numLayers, length);
 			t.forward(length);

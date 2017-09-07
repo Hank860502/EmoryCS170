@@ -1,10 +1,10 @@
 public class MedievalTown{
 	public static void main(String[] args){
 		Turtle hank = new Turtle();
-		
+		hank.delay(5);
 		// hank.forward(100);
 		// double x=Math.PI;
-		// System.out.printf("" + x);
+		// System.out.printf("" +x);
 		// stick(hank);
 		// wall(hank);
 		arc(hank);
@@ -131,24 +131,32 @@ public class MedievalTown{
 	};
 
 	public static void arc(Turtle t){
-		t.forward(40);
+		t.forward(10);
 		t.left(90);
 		t.forward(30);
-		10=s/2sin(6)
-		double x=
+		double angle = 180/30;
+		// angle of a 30-gon
+		double x=Math.sin(angle* Math.PI / 180)*10*2;
+		double y=Math.sin(angle* Math.PI / 180)*20*2;
+		// using the formula: radius=s/[2sin/180/n], where s=length of side and n=number of sides, to get the value of each times turle has to move forward
+		//Math.sin() only takes radian, so angle * Math.PI/180 get the radian first
 		for(int i=0; i<15; i++){
 			t.forward(x);
+			t.right(360/30);
+		};
+
+		t.forward(30);
+		t.left(90);
+		t.forward(10);
+		t.left(90);
+		t.forward(30);
+		for(int i=0; i<15; i++){
+			t.forward(y);
 			t.left(360/30);
 		};
-		// double pi= Math.PI;
-		// double x= 20*pi/2;
-		// half perimeter of the inside arc
-		// t.right(pi);
-		t.forward(100);
-		t.right(90);
-		t.penup();
-		t.forward(10);
-		// move turtle to center of the circle
+		t.forward(35);
+		t.left(90);
+		// turtle back in origin
 	};
 
 	public static void tree(Turtle t){
