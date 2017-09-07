@@ -1,15 +1,23 @@
 public class MedievalTown{
 	public static void main(String[] args){
 		Turtle hank = new Turtle();
-		hank.delay(5);
+		hank.delay(2);
 		// hank.forward(100);
 		// double x=Math.PI;
 		// System.out.printf("" +x);
-		// stick(hank);
-		// wall(hank);
+		stick(hank);
+		hank.forward(50);
+		wall(hank);
+		// should add a penup() here before forward, but line is already there so I think it doesn't matter
+		hank.forward(80);
 		arc(hank);
+		hank.penup();
+		// wall(hank);
+		// stick(hank);
 		// tree(hank);
+		// hank.forward(100);
 		// star(hank);
+		// hank.forward(100);
 		// mountain(hank);
 	};
 
@@ -127,10 +135,12 @@ public class MedievalTown{
 		// 8 sets of this combination
 
 		t.backward(80);
+		t.pendown();
 		// turtle back in original start point
 	};
 
 	public static void arc(Turtle t){
+		System.out.printf("arc!");
 		t.forward(10);
 		t.left(90);
 		t.forward(30);
@@ -138,13 +148,14 @@ public class MedievalTown{
 		// angle of a 30-gon
 		double x=Math.sin(angle* Math.PI / 180)*10*2;
 		double y=Math.sin(angle* Math.PI / 180)*20*2;
+		System.out.printf("arc2");
 		// using the formula: radius=s/[2sin/180/n], where s=length of side and n=number of sides, to get the value of each times turle has to move forward
 		//Math.sin() only takes radian, so angle * Math.PI/180 get the radian first
 		for(int i=0; i<15; i++){
 			t.forward(x);
 			t.right(360/30);
 		};
-
+		System.out.printf("arc3");
 		t.forward(30);
 		t.left(90);
 		t.forward(10);
