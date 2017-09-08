@@ -76,6 +76,7 @@ public class MedievalTown{
 		// third mountain
 		mountain(hank);
 		// moving to star starting point
+		
 		hank.penup();
 		hank.backward(350);
 		hank.left(90);
