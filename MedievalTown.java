@@ -110,6 +110,29 @@ public class MedievalTown{
 		hank.pendown();
 		// fifth star
 		star(hank);
+		hank.penup();
+		hank.forward(170);
+		hank.right(90);
+		hank.forward(20);
+		hank.left(90);
+		hank.pendown();
+		// sixth star
+		star(hank);
+		hank.penup();
+		hank.forward(60);
+		hank.right(90);
+		hank.forward(60);
+		hank.left(90);
+		hank.pendown();
+		// seventh star
+		star(hank);
+		hank.penup();
+		hank.forward(80);
+		hank.left(90);
+		hank.forward(50);
+		hank.right(90);
+		//last star
+		star(hank);
 		// tree(hank);
 		// hank.forward(100);
 		// hank.forward(100);
