@@ -14,6 +14,11 @@ public class Polyspiral {
       t.left(360/n);
     }
 
+    for(int i=0; i<rounds*n; i++){
+      t.right(360/n);
+      t.backward((rounds*n-i) * base);
+    }
+
 
   }
 
