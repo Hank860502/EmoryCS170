@@ -26,7 +26,7 @@ public class MedievalTown{
 		// move turtle to the point that I can loop the arc thrice
 		for(int i=0; i<3; i++){
 			hank.penup();
-			hank.forward(60);
+			hank.forward(50);
 			hank.left(90);
 			hank.forward(20);
 			hank.right(90);
@@ -40,6 +40,7 @@ public class MedievalTown{
 		hank.forward(30);
 		hank.left(180);
 		// move turtle to where the bottom row of tree starts
+		hank.pendown();
 		trees(hank);
 		// bottom layer of trees
 		hank.left(90);
@@ -47,14 +48,71 @@ public class MedievalTown{
 		hank.forward(40);
 		hank.right(90);
 		hank.forward(40);
+		hank.pendown();
 		trees(hank);
-
-
+		//moving to mountain starting point
+		hank.penup();
+		hank.backward(510);
+		hank.left(90);
+		hank.forward(120);
+		hank.right(90);
+		hank.pendown();
+		// start drwaing mountain
+		mountain(hank);
+		hank.penup();
+		hank.forward(180);
+		hank.left(90);
+		hank.forward(40);
+		hank.right(90);
+		hank.pendown();
+		// second mountain
+		mountain(hank);
+		hank.penup();
+		hank.forward(210);
+		hank.right(90);
+		hank.forward(20);
+		hank.left(90);
+		hank.pendown();
+		// third mountain
+		mountain(hank);
+		// moving to star starting point
+		hank.penup();
+		hank.backward(350);
+		hank.left(90);
+		hank.forward(140);
+		hank.right(90);
+		hank.pendown();
+		// start drawing first star
+		star(hank);
+		hank.penup();
+		hank.forward(80);
+		hank.pendown();
+		//second  star
+		star(hank);
+		hank.penup();
+		hank.backward(40);
+		hank.right(90);
+		hank.forward(40);
+		hank.left(90);
+		hank.pendown();
+		// third star
+		star(hank);
+		hank.penup();
+		hank.forward(160);
+		hank.pendown();
+		// fourth star
+		star(hank);
+		hank.penup();
+		hank.backward(40);
+		hank.left(90);
+		hank.forward(70);
+		hank.right(90);
+		hank.pendown();
+		// fifth star
+		star(hank);
 		// tree(hank);
 		// hank.forward(100);
-		// star(hank);
 		// hank.forward(100);
-		// mountain(hank);
 	};
 
 	public static void square(Turtle t){
@@ -255,6 +313,7 @@ public class MedievalTown{
 		};
 		t.penup();
 		t.backward(120);
+		t.pendown();
 		// turtle back to origin
 	};
 	// draw four trees at once
@@ -268,9 +327,8 @@ public class MedievalTown{
 		};
 		// 7 sets of small triangles
 		t.forward(10);
-		t.right(135);
-		t.forward(10);
-		t.left(90);
+		t.right(45);
+		t.backward(10);
 		// turtle back in original start point
 	};
 
