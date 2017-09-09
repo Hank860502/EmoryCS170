@@ -5,18 +5,19 @@ public class Multistar{
 
 		// first test, 7 stars
 		multistar(hank, 7, 100);
-		// hank.penup();
-  //   hank.forward(300);
-  //   hank.pendown();
+		hank.penup();
+    hank.forward(300);
+    hank.pendown();
 
-  //   // 10 stars
-		// multistar(hank, 10, 70);
-		// hank.penup();
-  //   hank.forward(300);
-  //   hank.pendown();
+    // 10 stars
+		multistar(hank, 10, 70);
+		hank.penup();
+    hank.forward(300);
+    hank.pendown();
 
-  //   // 25 stars
-		// multistar(hank, 25, 120);
+    // 25 stars
+		multistar(hank, 25, 120);
+		hank.hideturtle();
 	}
 
 	public static void multistar(Turtle t, int n, double length){

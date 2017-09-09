@@ -6,7 +6,7 @@ public class MedievalTown{
 		// double x=Math.PI;
 		// System.out.printf("" +x);
 
-		stick(hank);
+		tower(hank);
 		hank.forward(50);
 		wall(hank);
 		// should add a penup() here before forward, but line is already there so I think it doesn't matter
@@ -17,7 +17,7 @@ public class MedievalTown{
 		hank.pendown();
 		wall(hank);
 		hank.forward(80);
-		stick(hank);
+		tower(hank);
 		hank.penup();
 		hank.forward(20);
 		hank.left(90);
@@ -132,11 +132,10 @@ public class MedievalTown{
 		hank.left(90);
 		hank.forward(50);
 		hank.right(90);
+		hank.pendown();
 		//last star
 		star(hank);
-		// tree(hank);
-		// hank.forward(100);
-		// hank.forward(100);
+		hank.hideturtle();
 	};
 
 	public static void square(Turtle t){
@@ -146,9 +145,13 @@ public class MedievalTown{
 		};
 	};
 
-	public static void stick(Turtle t){
-		double x = Math.sqrt(500);
-		// square root of 20*20 + 10*10 to get the length of the roof
+	public static void tower(Turtle t){
+		double hyp = Math.sqrt(500);
+		// square root of 20*20 + 10*10 to get the length of the hypotenuse
+
+		// angle of the tower roof
+		// tangent of 2/1, and turn it to radians so that atan function can handle
+		double angle = Math.atan(2)/Math.PI*180;
 
 		t.forward(50);
 		t.left(90);
@@ -161,10 +164,11 @@ public class MedievalTown{
 		// t.right(90);
 		// t.backward(20);
 		// t.left(90);
-		// im testing out that my angles are right, by drawing out the actual triangle at the stick, because the wall seems to overlap my sticks by a little
-		t.right(60);
-		t.forward(x);
-		t.left(60);
+		// im testing out that my angles are right, by drawing out the actual triangle at the tower, because the wall seems to overlap my towers by a little
+
+		t.right(angle);
+		t.forward(hyp);
+		t.left(angle);
 		t.forward(20);
 		t.left(90);
 		t.forward(10);
@@ -187,14 +191,14 @@ public class MedievalTown{
 		// Split each bump on the roof to two parts, the first part handles all the right turns and forward. Second part handles all the left turns and forward. After creating one little bump loop it 5 times to create the whole roof.
 
 		t.forward(10);
-		t.left(60);
-		t.forward(x);
-		t.right(60);
+		t.left(angle);
+		t.forward(hyp);
+		t.right(angle);
 		t.forward(100);
 		t.left(90);
 		// turtle back in original start point
 
-		// start to draw windows on the stick
+		// start to draw windows on the tower
 		for(int i=0; i<2; i++){
 			t.forward(20);
 			t.left(90);

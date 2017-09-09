@@ -16,6 +16,7 @@ public class Houseline{
     hank.pendown();
     // test3
     houseline(hank, 4);
+    hank.hideturtle();
 	}
 
 	public static void houseline(Turtle t, int numHouses){

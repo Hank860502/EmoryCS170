@@ -3,17 +3,21 @@ public class Pyramid{
 		Turtle hank = new Turtle();
 
 		hank.delay(5);
+		// test1
 		pyramid(hank, 200, 5);
 
 		hank.penup();
 		hank.forward(400);
 		hank.pendown();
+		// test2
 		pyramid(hank, 200, 10);
 
 		hank.penup();
 		hank.forward(400);
 		hank.pendown();
+		// test3
 		pyramid(hank, 300, 10);
+		hank.hideturtle();
 	}
 
 	public static void pyramid(Turtle t, double base, int levels){
