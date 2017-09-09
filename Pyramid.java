@@ -43,7 +43,11 @@ public class Pyramid{
 			t.right(90);
 			t.forward(lengthOfSquare);
 			// turtle at the beginning of the next layer
-
 		}
+		// bring back turtle
+		t.left(90);
+		t.backward(levels*lengthOfSquare); // turtle back to bottom layer
+		t.right(90);
+		t.backward(levels*lengthOfSquare); // levels = amount of squares to the origin
 	}
 }
