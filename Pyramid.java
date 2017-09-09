@@ -16,20 +16,18 @@ public class Pyramid{
 		pyramid(hank, 300, 10);
 	}
 
-	// levels 5=9square
-	// levels 10=19square
-	// the amount of squares at first layer should be 2*levels-1
-	// -1, -2, -4, -6, -8
 	public static void pyramid(Turtle t, double base, int levels){
 		// base/(2*levels-1) = length of each square
 		// 2*levels-1 = amount of squares in the first layer
 		double lengthOfSquare = base/(2*levels-1);
 
 		for(int l=0; l<levels; l++){
-			// l*2= the amount each leayer is reducing, set l=1 and limit+1
 			// looping for the squares of each level
 			for(int i=0; i<2*levels-1-l*2; i++){
-
+			// levels 5 = 9square
+			// levels 10 = 19square
+			// Each level of squares are 2*levels -1, -3, -5, -7 and -9
+			// Using the trait that after first level, -2, we know that the squares in each levels are 2*levels-1-l*2
 				// looping for each square
 				for(int s=0; s<4; s++){
 					t.forward(lengthOfSquare);
