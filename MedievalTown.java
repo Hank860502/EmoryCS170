@@ -68,7 +68,7 @@ public class MedievalTown{
 		// second mountain
 		mountain(hank);
 		hank.penup();
-		hank.forward(210);
+		hank.forward(220);
 		hank.right(90);
 		hank.forward(20);
 		hank.left(90);
@@ -353,20 +353,19 @@ public class MedievalTown{
 	public static void mountain(Turtle t){
 		t.left(30);
 		double x=Math.sqrt(160*160+80*80);
-		// square root of the sum of two sides squares is the hypotenuse, this gets one side of the mountain
+		// Drawing an invisible line to get the first side of the mountain, square root of the sum of two sides squares is the hypotenuse
 		t.forward(x);
 		t.right(90);
 		double y=Math.sqrt(120*120+60*60);
-		// second side of the mountain
+		// // Drawing a second invisible line to get the second side of the mountain
 		t.forward(y);
 
 		t.penup();
-		t.right(120);
-		t.forward(220);
-		t.right(90);
-		t.forward(30);
+		t.backward(y);
+		t.left(90);
+		t.backward(x);
 		t.pendown();
-		t.right(90);
+		t.right(30);
 		// not so sure if the turle is back in origin
 
 		// turtle back in original start point
