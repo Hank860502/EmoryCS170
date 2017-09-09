@@ -7,17 +7,23 @@ public class Houseline{
 	}
 
 	public static void houseline(Turtle t, int numHouses){
-		for(int i=1; i<=numHouses; i++){
-			house(t, i);
+    double y=0;
+    // set an variable y here to remember how far did the turtlr moved forward
+    for(int i=1; i<=numHouses; i++){
+      house(t, i);
       t.penup();
       t.forward(4.0/3*(1.0/i*80));
+      y+=4.0/3*(1.0/i*80);
+      // add the distance to y
       t.pendown();
-		}
+    }
+    
     t.penup();
     // (top+bottom)*high/2
-    t.backward(((4.0/3*80)+4.0/3*(1.0/numHouses*80))*numHouses/2);
+    // t.backward(((4.0/3*80)+4.0/3*(1.0/numHouses*80))*numHouses/2);
+    // dont know why does this not work?????
+    t.backward(y);
     t.pendown();
-    t.forward(500);
 	}
 
 	public static void house(Turtle t, double houseNum) {
