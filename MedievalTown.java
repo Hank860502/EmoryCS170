@@ -156,18 +156,8 @@ public class MedievalTown{
 		t.forward(50);
 		t.left(90);
 		t.forward(100);
-		// t.right(90);
-		// t.forward(20);
-		// t.left(90);
-		// t.forward(10);
-		// t.backward(10);
-		// t.right(90);
-		// t.backward(20);
-		// t.left(90);
-		// im testing out that my angles are right, by drawing out the actual triangle at the tower, because the wall seems to overlap my towers by a little
-
-		t.right(angle);
-		t.forward(hyp);
+		t.right(angle); // using variable that is set before
+		t.forward(hyp); // same here
 		t.left(angle);
 		t.forward(20);
 		t.left(90);
