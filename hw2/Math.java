@@ -11,7 +11,12 @@ public class Math{
 		System.out.println(product(5,4)); // 20
 
 		// problem (c)
-		
+		System.out.println(compoundInterest(1000, 0.05, 3)); // 1157.625
+		System.out.println(compoundInterest(1000, 0.08, 2)); // 1166.4
+
+		// problem(d)
+		System.out.println();		
+
 	}
 
 	public static int sumOfSquares(int n){
@@ -28,5 +33,14 @@ public class Math{
 			sum += x;
 		}
 		return sum;
+	}
+
+	public static double compoundInterest(double money, double interestRate, int years){
+		double sum=1;
+		for(int i=0; i<years; i++){
+			sum *= (1+interestRate);
+			// this gives a weird long decimal number...
+		}
+		return 1000*sum;
 	}
 }
