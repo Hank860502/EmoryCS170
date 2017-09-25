@@ -11,6 +11,10 @@ public class Variables{
   System.out.println(giveCandies(5, 2));
   System.out.println(sumN(5));
   System.out.println(sumN(3));
+  System.out.println(yearsToTarget(1000, 0.05, 2000)); // 15
+  System.out.println(breakEvenQuality(1, 0.5, 1000)); // 2000
+  System.out.println(breakEvenQuality(1, 0.7, 1000)); // 3334
+
 	
 	}
 
@@ -45,4 +49,27 @@ public class Variables{
 		}
 		return result;
 	}
+
+	public static int yearsToTarget(double initMoney, double interestRate, double targetMoney){
+		int year = 0;
+		while(initMoney <= targetMoney){
+			year++;
+			initMoney *= 1+interestRate;
+		}
+		return year;
+	}
+
+	public static int breakEvenQuality(double p, double c, double k){
+		int unit=0;
+		while (k+unit*c > unit*p) {
+			unit ++;
+		}
+		return unit;
+	}
+
 }
+
+
+
+
+
