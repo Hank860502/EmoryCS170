@@ -8,7 +8,9 @@ public class Variables{
 	String c = "2";
 	// System.out.println(c*a+a);
 	System.out.println(c + a*a);
-      System.out.println(giveCandies(5, 2));
+  System.out.println(giveCandies(5, 2));
+  System.out.println(sumN(5));
+  System.out.println(sumN(3));
 	
 	}
 
@@ -32,5 +34,15 @@ public class Variables{
 			x += s;
 		}
 		return x;
+	}
+
+	public static int sumN(int n){
+		int i = 0;
+		int result = 0;	
+		while(i<=n){
+			result += i;
+			i++;
+		}
+		return result;
 	}
 }
