@@ -14,6 +14,7 @@ public class Variables{
   System.out.println(yearsToTarget(1000, 0.05, 2000)); // 15
   System.out.println(breakEvenQuality(1, 0.5, 1000)); // 2000
   System.out.println(breakEvenQuality(1, 0.7, 1000)); // 3334
+  System.out.println(mySubstring("hank natt", 1, 5)); // 3334
 
 	
 	}
@@ -67,6 +68,13 @@ public class Variables{
 		return unit;
 	}
 
+	public static String mySubstring(String s, int start, int end){
+		String store = "";
+		for(int i=start; i<end; i++){
+			store+=s.charAt(i);
+		}
+		return store;
+	}
 }
 
 
