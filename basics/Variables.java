@@ -15,6 +15,8 @@ public class Variables{
   System.out.println(breakEvenQuality(1, 0.5, 1000)); // 2000
   System.out.println(breakEvenQuality(1, 0.7, 1000)); // 3334
   System.out.println(mySubstring("hank natt", 1, 5)); // 3334
+  System.out.println(reverse("hank natt")); // 3334
+  System.out.println(mergeStrings("hank", "nat")); // 3334
 
 	
 	}
@@ -73,6 +75,28 @@ public class Variables{
 		for(int i=start; i<end; i++){
 			store+=s.charAt(i);
 		}
+		return store;
+	}
+
+	public static String reverse(String s){
+		String store = "";
+		for(int i=s.length() -1 ; i>=0; i--){
+			store+=s.charAt(i);
+		}
+		return store;
+	}
+
+	public static String mergeStrings(String s1, String s2){
+		String store = "";
+		int i;
+		for(i=0; i<s1.length(); i++){
+			store+=s1.charAt(i);
+			store+=s2.charAt(i);
+		}
+		for(;i<s2.length(); i++){
+			store+=s2.charAt(i);
+		}
+		
 		return store;
 	}
 }
