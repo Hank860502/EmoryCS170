@@ -1,7 +1,3 @@
-# Emory 2017 Fall CS 170
-# About
-Using a library, Turtle Java, build by professor Davide Fossati, we learn the basics of Java.
-
 # Homework1
 Draw the following images using Turtle library
 ![alt text](https://user-images.githubusercontent.com/17296898/30251401-df51c788-962c-11e7-83f4-24bc4a43bb39.png)
