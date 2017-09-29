@@ -15,8 +15,8 @@ public class Math{
 		System.out.println(compoundInterest(1000, 0.08, 2)); // 1166.4
 
 		// problem(d)
-		System.out.println(polySpiralLength(3, 10, 5));
-		System.out.println(polySpiralLength(3, 12.8, 5));
+		System.out.println(polySpiralLength(3, 10, 5)); 
+		System.out.println(polySpiralLength(5, 10, 4));
 
 
 	}
@@ -24,7 +24,7 @@ public class Math{
 	public static int sumOfSquares(int n){
 		int sum=0;
 		for(int i=1; i<=n; i++){
-			// i needs to start from 1 because we are counting the sum from 1 o n
+			// i needs to start from 1 because we are counting the sum from 1
 			sum += i*i;
 		}
 		return sum;
@@ -40,19 +40,19 @@ public class Math{
 
 	public static double compoundInterest(double money, double interestRate, int years){
 		// formula of compound interest is money * (interesRtate power of years)
-		double sum=1.0; // sum needs to be 1 so that intereestRate power of 1 will be itself
+		double sum= money;
 
 		for(int i=0; i<years; i++){
 			sum *= (1+interestRate);
 			// instead of using interestRate.pow(3), times itself three times using a loop and store it as sum
 			// this gives a weird long decimal number...
 		}
-		return money*sum; // retrun the compoundInterest  
+		return sum; // retrun the compoundInterest  
 	}
 
 	public static double polySpiralLength(int n, double base, int rounds){
 		// since base is double, method should be declare as a double
-		double sum = 0.0;
+		double sum = 0;
 
 	  for(int i=0; i<rounds*n; i++){
 	  	// using the previous code and remove the rotation part
