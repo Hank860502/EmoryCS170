@@ -6,11 +6,11 @@ public class CountVowels{
 
 	}
 
-	public static int countVowels(String word){
+	public static int countVowels(String s){
     int count = 0;
 
-    for(int i=0; i<word.length(); i++){
-      if(word.charAt(i) == 'a' || word.charAt(i) == 'e' || word.charAt(i) == 'i' || word.charAt(i) == 'o' || word.charAt(i) == 'u'){
+    for(int i=0; i<s.length(); i++){
+      if(s.charAt(i) == 'a' || s.charAt(i) == 'e' || s.charAt(i) == 'i' || s.charAt(i) == 'o' || s.charAt(i) == 'u'){
         count += 1; // if the index letter equals to any vowels, add 1 to count
       }
     }
