@@ -6,11 +6,13 @@ public class AvgLength{
 		System.out.println(avgLength(new String[]{"Hello", "Q"})); // 3.0
 		System.out.println(avgLength(new String[]{})); // 0.0
 		System.out.println(avgLength(new String[]{"Hello", "Goodbye"})); // 6.0
+		
+		System.out.println(avgLength(new String[]{"d", "dd"})); // 1.5
 
 	}
 
 	public static double avgLength(String[] x){
-		int store = 0;
+		double store = 0;
 		if(x.length==0){
 			return 0.0;
 		}
