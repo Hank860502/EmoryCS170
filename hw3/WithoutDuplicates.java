@@ -10,19 +10,28 @@ public class WithoutDuplicates{
 
 		System.out.println(arrayToString(testA, testALength)); // {1, 2, 3}
 		System.out.println(arrayToString(testB, testBLength)); // {1, 2, 3}
+		System.out.println(testA.length); // {1, 2, 3}
 
 	}
 
 	public static int[] withoutDuplicates(int[] x){
-		int[] store = {};
-		if(x.length>0){
-			// each index of array
-			for(int i=0; i<store.length; i++){
-				// add the length of each index to store
-				
+		int n = 1;
+		int[] store = new int[n];
+		if(x.length == 0 || x.length == 1){
+        return x;
+    }
+		else if(x.length>1){
+			store[0] = x[0]; // add first index of x to an empty array
+
+			for(int i=1; i<x.length; i++){
+				for(int j=0; j<store.length; j++){
+					if(x[i] != store[j]){ // if the second index of x not equal to the one in store already, add in to store
+						store[n] = x[i]; // add x[i] to an empty array
+						n++;
+					}
+				}
 			}
 		}
-
 		return store;
 	}
 
