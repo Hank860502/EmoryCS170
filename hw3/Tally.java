@@ -6,6 +6,9 @@ public class Tally{
 
 		int[] test2 = tally("sss aaa ee i ldo iwou");
 		System.out.println(arrayToString(test2, 5)); // {3, 2, 2, 2, 1}
+
+		int[] test3 = tally("");
+		System.out.println(arrayToString(test3, 5)); // {3, 2, 2, 2, 1}
 	}
 
 	public static int[] tally(String s){
