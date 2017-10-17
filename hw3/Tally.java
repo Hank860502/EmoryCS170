@@ -8,7 +8,7 @@ public class Tally{
 		System.out.println(arrayToString(test2, 5)); // {3, 2, 2, 2, 1}
 
 		int[] test3 = tally("");
-		System.out.println(arrayToString(test3, 5)); // {3, 2, 2, 2, 1}
+		System.out.println(arrayToString(test3, 5)); // {0, 0, 0, 0, 0}
 	}
 
 	public static int[] tally(String s){
