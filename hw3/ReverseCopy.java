@@ -11,9 +11,9 @@ public class ReverseCopy{
 		testC = reverseCopy(testC);
 		int testCLength = testC.length;
 
-		System.out.println(arrayToString(testA, testALength)); // {1, 2, 3}
-		System.out.println(arrayToString(testB, testBLength)); // {1, 2, 3, 0}
-		System.out.println(arrayToString(testC, testCLength)); // {1, 2, 3}
+		System.out.println(arrayToString(testA, testALength)); // {3, 2, 1}
+		System.out.println(arrayToString(testB, testBLength)); // {0, 0, 3, 2, 1}
+		System.out.println(arrayToString(testC, testCLength)); // {3, 2, 3, 1, 1, 2, 1}
 
 	}
 
