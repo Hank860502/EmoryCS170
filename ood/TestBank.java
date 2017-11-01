@@ -12,5 +12,7 @@ public class TestBank {
 			a1.withdraw(80);
 			System.out.println(a1.balance); // 20
 
+			
+
 		}
 }
