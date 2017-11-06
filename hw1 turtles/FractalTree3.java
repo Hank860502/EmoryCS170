@@ -2,7 +2,7 @@ public class FractalTree3 {
 
   public static void main(String[] args) {
     Turtle t = new Turtle();
-    t.delay(1);
+    t.delay(30);
     t.left(90);
     tree(t, 150, 10);
   }
