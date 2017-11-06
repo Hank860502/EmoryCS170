@@ -26,14 +26,12 @@ public class FractalFlower{
 	public static void simpleFlower(Turtle t, double size){
 		// using normal iteration draw a flower
 		t.forward(size*2/3);
-		t.right(135);
-		for(int i=0; i<7; i++){
+		for(int i=0; i<8; i++){
 			t.forward(size/3);
 			t.backward(size/3);
 			t.left(45);
 		}
-		t.forward(size*2/3);
-		t.left(180);
+		t.backward(size*2/3);
 	}
 
 	public static void fractalFlower(Turtle t, double size, int level){

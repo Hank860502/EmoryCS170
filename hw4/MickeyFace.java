@@ -3,6 +3,7 @@ public class MickeyFace {
 		Turtle t = new Turtle();
 		t.delay(0);
 		mickeyFace(t, 200);
+		fractalMickeyMouse(t, 200, 6);
 	}
 
 	public static void mickeyFace(Turtle t, double r){
@@ -63,5 +64,42 @@ public class MickeyFace {
 			t.forward(w);
 			t.right(360/sides);
 		};
+	}
+
+	public static void fractalMickeyMouse(Turtle t, double r, int level){
+		mickeyFace(t, r);
+		if(level == 0)
+			return;
+		else {
+
+			// right ears
+			t.left(45);
+			t.penup();
+			t.forward(r*3/2);
+			t.right(45);
+			t.pendown();
+			// extend right ears until level 0
+			fractalMickeyMouse(t, r/2, level-1);
+
+			t.penup();
+			t.left(45);
+			t.backward(r*3/2);
+			t.right(45);
+
+			// left ears
+			t.left(135);
+			t.penup();
+			t.forward(r*3/2);
+			t.right(135);
+			t.pendown();
+			// extend right ears until level 0
+			fractalMickeyMouse(t, r/2, level-1);
+
+			t.penup();
+			t.left(135);
+			t.backward(r*3/2);
+			t.right(135);
+		}
+
 	}
 }
