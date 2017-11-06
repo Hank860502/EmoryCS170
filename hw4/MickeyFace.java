@@ -71,7 +71,6 @@ public class MickeyFace {
 		if(level == 0)
 			return;
 		else {
-
 			// right ears
 			t.left(45);
 			t.penup();

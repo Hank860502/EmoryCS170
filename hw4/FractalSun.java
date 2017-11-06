@@ -21,7 +21,7 @@ public class FractalSun{
 			// teal colors
 			t.color(red, green, blue);
 			circle(t, r);
-			for(int i=0;i<8;i++){
+			for(int i=0 ;i<8; i++){
 				t.penup();
 				t.forward(2*r);
 
@@ -46,7 +46,7 @@ public class FractalSun{
 		t.left(90);
 		t.pendown();
 		t.left(180.0/300);
-		for(int i=0;i<300;i++){
+		for(int i=0; i<300; i++){
 			t.forward(2*Math.PI*r/300);
 			t.left(360.0/300);
 		}
