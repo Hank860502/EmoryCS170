@@ -1,9 +1,10 @@
-public class Polygon{
+public class Polygon extends Shape{
 
 	double side;
 	int numSides;
 
 	public Polygon(double side, int numSides){
+		super("black");
 		this.side = side;
 		this.numSides = numSides;
 	}
